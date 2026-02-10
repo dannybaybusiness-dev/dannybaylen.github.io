@@ -1,3 +1,4 @@
+<!DOCTYPE html>
 <html lang="en">
 <head>
 <meta charset="UTF-8">
@@ -182,4 +183,37 @@ allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-pictur
 <h2>VIDEOS</h2>
 <div class="video-grid">
   <iframe src="https://www.youtube.com/embed/4GQ9soRIelU" width="100%" height="315" allowfullscreen></iframe>
-  <iframe src="https
+  <iframe src="https://www.youtube.com/embed/VV155sd5uA8" width="100%" height="315" allowfullscreen></iframe>
+</div>
+</section>
+
+<section id="gallery" class="fade">
+<h2>PHOTOS</h2>
+<div class="gallery">
+  <img src="photo1.jpg">
+  <img src="photo2.jpg">
+  <img src="photo3.jpg">
+  <img src="photo4.jpg">
+</div>
+</section>
+
+<footer>
+<p>© 2026 Danny Baylen</p>
+</footer>
+
+<script>
+const fades = document.querySelectorAll(".fade");
+
+const observer = new IntersectionObserver(entries=>{
+  entries.forEach(entry=>{
+    if(entry.isIntersecting){
+      entry.target.classList.add("show");
+    }
+  });
+});
+
+fades.forEach(f=>observer.observe(f));
+</script>
+
+</body>
+</html>
