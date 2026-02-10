@@ -1,11 +1,13 @@
-
 <html lang="en">
 <head>
 <meta charset="UTF-8">
 <title>Danny Baylen</title>
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600&display=swap" rel="stylesheet">
+<!-- Fonts -->
+<link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;600&family=Inter:wght@300;400;600&display=swap" rel="stylesheet">
+
+<!-- Icons -->
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
 
 <style>
@@ -19,7 +21,7 @@ body {
 
 /* HEADER */
 header {
-  background:url("images/me.jpg") center/cover no-repeat;
+  background:url("images/header.jpg") center/cover no-repeat;
   padding:40px 20px;
   position:relative;
 }
@@ -39,8 +41,9 @@ header * {
 }
 
 h1 {
+  font-family:'Cinzel', serif;
   letter-spacing:6px;
-  font-weight:400;
+  font-weight:600;
 }
 
 /* SOCIAL ICONS */
@@ -66,9 +69,11 @@ nav a {
   opacity:0.8;
 }
 
-nav a:hover {opacity:1}
+nav a:hover {
+  opacity:1;
+}
 
-/* CONTACT */
+/* CONTACT BUTTON */
 .contact-btn {
   display:inline-block;
   margin-top:15px;
@@ -98,6 +103,13 @@ section {
   transform:translateY(0);
 }
 
+/* RECENT RELEASES */
+.releases {
+  display:grid;
+  grid-template-columns:repeat(auto-fit,minmax(300px,1fr));
+  gap:20px;
+}
+
 /* GALLERY */
 .gallery {
   display:grid;
@@ -113,13 +125,6 @@ section {
 
 /* VIDEOS */
 .video-grid {
-  display:grid;
-  grid-template-columns:repeat(auto-fit,minmax(300px,1fr));
-  gap:20px;
-}
-
-/* RECENT RELEASES */
-.releases {
   display:grid;
   grid-template-columns:repeat(auto-fit,minmax(300px,1fr));
   gap:20px;
@@ -161,7 +166,9 @@ iframe {
     <a href="#gallery">PHOTOS</a>
   </nav>
 
-  <a href="mailto:dannybaybusiness@gmail.com" class="contact-btn">CONTACT</a>
+  <a href="mailto:dannybaybusiness@gmail.com?subject=Booking%20Inquiry&body=Hi%20Danny," class="contact-btn">
+    CONTACT
+  </a>
 </header>
 
 <!-- RECENT RELEASES -->
@@ -169,18 +176,20 @@ iframe {
 <h2>RECENT RELEASES</h2>
 
 <div class="releases">
-  <iframe src="PASTE_TRACK_LINK_HERE" width="100%" height="152" allow="encrypted-media"></iframe>
-  <iframe src="PASTE_TRACK_LINK_HERE" width="100%" height="152" allow="encrypted-media"></iframe>
+  <!-- Replace these with your Spotify embed track links -->
+  <iframe src="<iframe data-testid="embed-iframe" style="border-radius:12px" src="https://open.spotify.com/embed/album/4vYp0KvPQHBsz7OBSjI1qw?utm_source=generator" width="100%" height="152" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>" width="100%" height="152" allow="encrypted-media"></iframe>
+  <iframe src="<iframe data-testid="embed-iframe" style="border-radius:12px" src="https://open.spotify.com/embed/album/6aAF3r7pp1AUCxfkaabZrY?utm_source=generator" width="100%" height="152" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>" width="100%" height="152" allow="encrypted-media"></iframe>
 </div>
 </section>
 
-<!-- ARTIST PLAYER -->
+<!-- ALL MUSIC -->
 <section class="fade">
 <h2>ALL MUSIC</h2>
 <iframe src="https://open.spotify.com/embed/artist/1sEDsEf0zV8EWIl5ZwirGS?theme=0"
 width="90%" height="380" allow="encrypted-media"></iframe>
 </section>
 
+<!-- VIDEOS -->
 <section id="videos" class="fade">
 <h2>VIDEOS</h2>
 <div class="video-grid">
@@ -189,6 +198,7 @@ width="90%" height="380" allow="encrypted-media"></iframe>
 </div>
 </section>
 
+<!-- GALLERY -->
 <section id="gallery" class="fade">
 <h2>PHOTOS</h2>
 <div class="gallery">
@@ -217,4 +227,3 @@ fades.forEach(f=>observer.observe(f));
 
 </body>
 </html>
-
