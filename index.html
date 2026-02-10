@@ -5,7 +5,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Danny Baylen</title>
 
-<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&family=Rubik+Glitch&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Bangers&family=Inter:wght@400;600;800&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
 
 <style>
@@ -67,37 +67,55 @@ body > *:not(.rain) {
 
 #loader h1 {
   margin: 0;
-  font-family: 'Rubik Glitch', system-ui;
-  letter-spacing: 3px;
-  font-size: 40px;
+  font-family: 'Bangers', system-ui;
+  letter-spacing: 2px;
+  font-size: 42px;
   color: var(--brand-red);
 }
 
 header {
-  background: url("images/header.JPG") center/cover no-repeat;
-  padding: 30px 20px;
+  min-height: 70vh;
+  padding: 40px 20px 60px;
   position: relative;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+header::before {
+  content: "";
+  position: absolute;
+  inset: -7%;
+  background: url("images/header.JPG") center 28%/cover no-repeat;
+  background-attachment: scroll;
+  transform: scale(0.9);
+  transform-origin: center;
+  filter: brightness(1.22) saturate(1.04);
+  z-index: 0;
 }
 
 header::after {
   content: "";
   position: absolute;
   inset: 0;
-  background: rgba(0, 0, 0, 0.72);
-  z-index: 0;
+  background: rgba(0, 0, 0, 0.4);
+  z-index: 1;
 }
 
 header * {
   position: relative;
-  z-index: 1;
+  z-index: 2;
 }
 
 .logo {
   margin-top: 16px;
-  font-family: 'Rubik Glitch', system-ui;
-  letter-spacing: 4px;
-  font-size: clamp(2rem, 4vw, 3rem);
+  font-family: 'Bangers', system-ui;
+  letter-spacing: 2px;
+  font-size: clamp(2.5rem, 5vw, 4.1rem);
   color: #fff;
+  line-height: 1;
+  text-shadow: 0 2px 6px rgba(0, 0, 0, 0.45);
 }
 
 .social-top {
@@ -374,4 +392,3 @@ function toggleMenu() {
 
 </body>
 </html>
-
